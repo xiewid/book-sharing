@@ -44,7 +44,7 @@ export var BOOKS: Book[] = [
     "author": "Ray C.Stedman",
     "isbn": "978-1-57293-407-8",
     "publisher": "",
-    "language": "_id",
+    "language": "id",
     "owner": {
       "_id": "info@immanuel-berlin.de",
       "first_name": "FeG",
@@ -62,7 +62,7 @@ export var BOOKS: Book[] = [
     "author": "Ray C.Stedman",
     "isbn": "978-1-57293-406-1",
     "publisher": "",
-    "language": "_id",
+    "language": "id",
     "owner": {
       "_id": "info@immanuel-berlin.de",
       "first_name": "FeG",
