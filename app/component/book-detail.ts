@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
+
 import { IBook } from "../model/book";
 import { MockService } from "../service/mock.service";
 
@@ -11,12 +12,12 @@ import { MockService } from "../service/mock.service";
 
 export class BookDetailComponent implements OnInit, OnDestroy {
   book: IBook;
-  sub: any;
+  private sub: any;
 
   constructor(
-    private mockService: MockService,
-    private route: ActivatedRoute) {
-  }
+    private route: ActivatedRoute,
+    private router: Router,
+    private mockService: MockService) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -27,9 +28,5 @@ export class BookDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.sub.unsubscribe();
-  }
-
-  goBack() {
-    window.history.back();
   }
 }

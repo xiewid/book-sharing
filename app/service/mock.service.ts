@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
+
 import { IBook } from "../model/book";
-import { BOOKS } from "../mock/book";
 import { ICategory } from "../model/category";
+
+import { BOOKS } from "../mock/book";
 import { CATEGORIES } from "../mock/category";
 
 @Injectable()

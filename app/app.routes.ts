@@ -1,12 +1,9 @@
-import { provideRouter, RouterConfig }  from "@angular/router";
+import { provideRouter, RouterConfig } from "@angular/router";
 
-import { BookDetailComponent } from "./component/book-detail";
+import { BooksRoutes } from "./routes/books.routes";
 
-export const routes: RouterConfig = [
-  {
-    path: "book/:id",
-    component: BookDetailComponent
-  }
+export const routes = [
+  ...BooksRoutes
 ];
 
 export const APP_ROUTER_PROVIDERS = [
