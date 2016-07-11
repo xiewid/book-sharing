@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Book } from "./model/book";
-import { Category } from "./model/category";
-import { CATEGORIES } from "./mock/category";
+import { Book } from "../model/book";
+import { BOOKS } from "../mock/book";
+import { Category } from "../model/category";
+import { CATEGORIES } from "../mock/category";
 
 @Injectable()
 export class MockService {
@@ -15,11 +16,11 @@ export class MockService {
   }
 
   getBooksWithCategory(category_id: number) {
-    return this.getAllBooks().then(books => books.find(book => book.category_id === category_id));
+    return this.getAllBooks().then(books => books.filter(book => book.category_id === category_id));
   }
 
   getRecommendedBooks() {
-    return this.getAllBooks().then(books => books.find(book => book.recommended === true));
+    return this.getAllBooks().then(books => books.filter(book => book.recommended === true));
   }
 
   getAllCategories() {
