@@ -212,7 +212,7 @@ export var BOOKS: IBook[] = [
     "recommended": true
   },
   {
-    "_id": "10",
+    "_id": "11",
     "title": "Memimpin Kelompok Kecil dengan Tujuan",
     "description": "Untuk pemimpin yang baru memulai kelompok kecil, pemimpin berpengalaman yang merasa kelompok kecilnya kehilangan tujuan, atau pemimpin yang ingin meningkatkan lagi kelompok kecilnya, buku ini merupakan peta perjalanan yang patut diikuti. Setiap bab berisi ide-ide yang langsung dapat diterapkan dan juga cara-cara membentuk kelompok kecil dari waktu ke waktu. Dengan bantuan keahlian Steve Gladen, Anda dapat mendefinisikan keberhasilan dengan jelas, mengembangkan rencana kepemimpinan pribadi, mengundang orang-orang ke dalam kelompok dan menolong para anggota memenuhi Amanat Agung dan Hukum yang Terutama.",
     "category_id": "congregation-service",
@@ -229,7 +229,7 @@ export var BOOKS: IBook[] = [
     "enter_date": "2016-07-10T10:00:00.000Z"
   },
   {
-    "_id": "11",
+    "_id": "12",
     "title": "What Does the Bible Really Teach about Homosexuality?",
     "description": "In this timely book, award-winning author Kevin DeYoung challenges each of us--the skeptic and the seeker, the certain and the confused--to take a humble look at God's Word regarding the issue of homosexuality.\nAfter examining key biblical passages in both the Old and New Testaments and the Bible's overarching teaching regarding sexuality, DeYoung responds to popular objections raised by Christians and non-Christians alike, making this an indispensable resource for thinking through one of the most pressing issues of our day.",
     "category_id": "society",
@@ -247,7 +247,7 @@ export var BOOKS: IBook[] = [
     "recommended": true
   },
   {
-    "_id": "12",
+    "_id": "13",
     "title": "Basic Christianity",
     "description": "In this book world-renowned scholar and preacher John Stott clearly defines both the fundamental claims of Christianity and the proper outworkings of those basic beliefs in the daily lives of believers. Stott's \"Basic Christianity\" is a sound, sensible guide for anyone seeking an intellectually satisfying presentation of the Christian faith.",
     "category_id": "faith-discipleship",
@@ -265,7 +265,7 @@ export var BOOKS: IBook[] = [
     "recommended": true
   },
   {
-    "_id": "13",
+    "_id": "14",
     "title": "Not A Fan",
     "description": "Das Wörterbuch beschreibt einen Fan als \"leidenschaftlichen Bewunderer\". So gesehen hat Jesus eine ganze Menge Fans. Viele wollen ihm nahe sein. Ein regelmäßiger Gottesdienstbesuch, ein mitgesprochenes Gebet oder der Autoaufkleber mit christlicher Botschaft sollen Ausdruck dafür sein. Aber Jesus geht es nicht um Bewunderer. Er wollte keinen Fanclub.\n\nWas bedeutet es wirklich, Christ zu sein? Nehmen Sie die Herausforderung an und werfen Sie einen ehrlichen Blick auf Ihr Glaubensleben. Vielleicht klingt Gottes Aufruf nach konsequenter Nachfolge zu radikal. Doch Jesus wünscht sich genau das von jedem Christ.\n\nÜbrigens: Von der englischsprachigen Originalausgabe dieses Buches wurden inzwischen über 1 Million Exemplare verkauft. Offenbar hat es Kyle Idleman geschafft, mit seinen Gedanken zur gelebten Nachfolge den Funken bei Vielen überspringen zu lassen.",
     "category_id": "faith-discipleship",
