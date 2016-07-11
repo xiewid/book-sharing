@@ -13,6 +13,10 @@ export class MockService {
     return Promise.resolve(BOOKS);
   }
 
+  private getAllCategories() {
+    return Promise.resolve(CATEGORIES);
+  }
+
   getBook(id: string) {
     return this.getAllBooks().then(books => books.find(book => book._id === id));
   }
@@ -25,7 +29,7 @@ export class MockService {
     return this.getAllBooks().then(books => books.filter(book => book.recommended === true));
   }
 
-  getAllCategories() {
-    return Promise.resolve(CATEGORIES);
+  getCategoryIds() {
+    return this.getAllCategories().then(categories => categories.map(category => category._id));
   }
 }
