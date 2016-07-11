@@ -17,12 +17,12 @@ export class BookDetailComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private mockService: MockService) {}
+    private service: MockService) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       let id = params["id"];
-      this.mockService.getBook(id).then(book => this.book = book);
+      this.service.getBook(id).then(book => this.book = book);
     });
   }
 
