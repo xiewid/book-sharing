@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 
 import { MockService } from "../service/mock.service";
 import { IBook } from "../model/book";
@@ -26,6 +26,6 @@ export class BookListComponent {
   }
 
   onSelect(book: IBook) {
-    this.router.navigate(['/book', book._id]);
+    this.router.navigate(["/book", book._id]);
   }
 }
