@@ -1,6 +1,6 @@
-import { Category } from "../app/model/category";
+import { ICategory } from "../model/category";
 
-export var CATEGORIES: Category[] = [
+export var CATEGORIES: ICategory[] = [
   {
     "_id": "devotionals",
     "description": "Buku renungan"

@@ -1,6 +1,6 @@
-import { Book } from "../app/model/book";
+import { IBook } from "../model/book";
 
-export var BOOKS: Book[] = [
+export var BOOKS: IBook[] = [
   {
     "_id": "0",
     "title": "Mein Äußerstes für sein Höchstes",

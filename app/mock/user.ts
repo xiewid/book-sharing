@@ -1,6 +1,6 @@
-import { User } from "../app/model/user";
+import { IUser } from "../model/user";
 
-export var USERS: User[] = [
+export var USERS: IUser[] = [
   {
     "_id": "info@immanuel-berlin.de",
     "first_name": "FeG",

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Book } from "../model/book";
+import { IBook } from "../model/book";
 import { MockService } from "../service/mock.service";
 
 @Component({
@@ -10,7 +10,7 @@ import { MockService } from "../service/mock.service";
 })
 
 export class BookDetailComponent implements OnInit, OnDestroy {
-  book: Book;
+  book: IBook;
   sub: any;
 
   constructor(
@@ -20,7 +20,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      let id = +params["id"];
+      let id = params["id"];
       this.mockService.getBook(id).then(book => this.book = book);
     });
   }
