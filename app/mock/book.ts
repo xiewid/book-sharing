@@ -16,7 +16,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T09:00:00.000Z"
+    "enter_date": new Date()
   },
   {
     "_id": "1",
@@ -33,7 +33,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T09:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -51,7 +51,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -69,7 +69,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "borrowed",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "borrower": {
       "_id": "max.mustermann@gmail.com",
       "first_name": "Max",
@@ -92,7 +92,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "borrowed",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "borrower": {
       "_id": "bettina.dev@gmail.com",
       "first_name": "Bettina",
@@ -120,7 +120,7 @@ export var BOOKS: IBook[] = [
       "first_name": "Max",
       "last_name": "Mustermann"
     },
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -138,7 +138,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "not_available",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -156,7 +156,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z"
+    "enter_date": new Date()
   },
   {
     "_id": "8",
@@ -173,7 +173,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -191,7 +191,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z"
+    "enter_date": new Date()
   },
   {
     "_id": "10",
@@ -208,7 +208,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -226,7 +226,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z"
+    "enter_date": new Date()
   },
   {
     "_id": "12",
@@ -243,7 +243,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -261,7 +261,7 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z",
+    "enter_date": new Date(),
     "recommended": true
   },
   {
@@ -279,6 +279,6 @@ export var BOOKS: IBook[] = [
       "last_name": "Immanuel Berlin"
     },
     "status": "available",
-    "enter_date": "2016-07-10T10:00:00.000Z"
+    "enter_date": new Date()
   }
 ];

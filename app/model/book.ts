@@ -11,9 +11,9 @@ export interface IBook {
   language: string;
   owner: IUser;
   status: string;
-  enter_date: string;
+  enter_date: Date;
   borrower?: IUser;
-  borrowed_from?: string;
+  borrowed_from?: Date;
   loan_period?: number;
   recommended?: boolean;
 }
