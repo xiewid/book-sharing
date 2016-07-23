@@ -1,12 +1,19 @@
 import { Component } from "@angular/core";
 import { ROUTER_DIRECTIVES, Router } from "@angular/router";
 import { TranslatePipe, TranslateService } from "ng2-translate/ng2-translate";
+import { AuthService } from "./service/auth.service";
 import { MockService } from "./service/mock.service";
 
 @Component({
   selector: "book-sharing",
   template: `
     <h1>Book Sharing</h1>
+    <h4 *ngIf="auth.authenticated()">You are logged in</h4>
+    <h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>
+    <div class="toolbar">
+      <button (click)="auth.login()">Login</button>
+      <button (click)="auth.logout()">Logout</button>
+    </div>
     <ul>
       <li *ngFor="let categoryId of categoryIds" (click)="onSelect(categoryId)">
         <a [routerLink]="['/books/category']">{{categoryId | translate}}</a>
@@ -15,7 +22,8 @@ import { MockService } from "./service/mock.service";
     <router-outlet></router-outlet>
   `,
   providers: [
-    MockService
+    MockService,
+    AuthService
   ],
   directives: [ROUTER_DIRECTIVES]
 })
@@ -25,7 +33,8 @@ export class AppComponent {
 
   constructor(
     private router: Router,
-    private translate: TranslateService,
+    private translator: TranslateService,
+    private auth: AuthService,
     private service: MockService
     ) { }
 
@@ -44,9 +53,9 @@ export class AppComponent {
     userLang = /(id|de|en)/gi.test(userLang) ? userLang : 'en';
 
     // this language will be used as a fallback when a translation isn't found in the current language
-    this.translate.setDefaultLang('en');
+    this.translator.setDefaultLang('en');
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    this.translate.use(userLang);
+    this.translator.use(userLang);
   }
 }

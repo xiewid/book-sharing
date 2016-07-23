@@ -17,15 +17,17 @@
     'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
     'ts':                         'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
     'typescript':                 'https://npmcdn.com/typescript@1.9.0-dev.20160409/lib/typescript.js',
-    'ng2-translate':              'node_modules/ng2-translate'
+    'ng2-translate':              'node_modules/ng2-translate',
+    'angular2-jwt':               'node_modules/angular2-jwt/angular2-jwt.js',
  };
 
   //packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.ts',  defaultExtension: 'ts' },
-    'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
-    'ng2-translate':              { defaultExtension: 'js' }
+    'rxjs':                       { defaultExtension: 'js' },
+    'ng2-translate':              { defaultExtension: 'js' },
+    'angular2-jwt':               { defaultExtension: 'js' },
   };
 
   var ngPackageNames = [
