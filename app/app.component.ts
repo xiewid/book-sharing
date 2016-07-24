@@ -8,11 +8,11 @@ import { MockService } from "./service/mock.service";
   selector: "book-sharing",
   template: `
     <h1>Book Sharing</h1>
-    <h4 *ngIf="auth.authenticated()">You are logged in</h4>
+    <h4 *ngIf="auth.authenticated() && auth.userProfile">Hi {{auth.userProfile.name}}</h4>
     <h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>
     <div class="toolbar">
-      <button (click)="auth.login()">Login</button>
-      <button (click)="auth.logout()">Logout</button>
+      <button *ngIf="!auth.authenticated()" (click)="auth.login()">Login</button>
+      <button *ngIf="auth.authenticated() && auth.userProfile" (click)="auth.logout()">Logout</button>
     </div>
     <ul>
       <li *ngFor="let categoryId of categoryIds" (click)="onSelect(categoryId)">

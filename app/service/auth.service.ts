@@ -7,7 +7,6 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
   // Configure Auth0
-  lock = new Auth0Lock('LxSbi4jywXqWG71QvpwEm73Ibl4AM6hh', 'book-sharing.eu.auth0.com', {});
   lock = new Auth0Lock('LxSbi4jywXqWG71QvpwEm73Ibl4AM6hh', 'book-sharing.eu.auth0.com', {
       languageDictionary: {
           title: ""
@@ -18,11 +17,22 @@ export class AuthService {
       }
   });
 
+  userProfile: Object;
+
   constructor() {
+    // Set userProfile attribute if already saved profile
+    this.userProfile = JSON.parse(localStorage.getItem('profile'));
+
     // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult) => {
       localStorage.setItem('id_token', authResult.idToken);
-      localStorage.setItem('profile', JSON.stringify(authResult.profile));
+
+      // Fetch profile information
+      this.lock.getProfile(authResult.idToken, (error, profile) => {
+        if (error) { return; }
+        localStorage.setItem('profile', JSON.stringify(profile));
+        this.userProfile = profile;
+      });
     });
   }
 
@@ -40,7 +50,8 @@ export class AuthService {
   public logout() {
     // To log out, we just need to remove
    // the user's profile and token
-   localStorage.removeItem('profile');
    localStorage.removeItem('id_token');
+   localStorage.removeItem('profile');
+   this.userProfile = undefined;
   };
 }
