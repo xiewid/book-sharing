@@ -8,6 +8,15 @@ declare var Auth0Lock: any;
 export class AuthService {
   // Configure Auth0
   lock = new Auth0Lock('LxSbi4jywXqWG71QvpwEm73Ibl4AM6hh', 'book-sharing.eu.auth0.com', {});
+  lock = new Auth0Lock('LxSbi4jywXqWG71QvpwEm73Ibl4AM6hh', 'book-sharing.eu.auth0.com', {
+      languageDictionary: {
+          title: ""
+      },
+      theme: {
+          logo: "app/assets/img/full_logo.png",
+          primaryColor: "#18ba9b",
+      }
+  });
 
   constructor() {
     // Add callback for lock `authenticated` event
