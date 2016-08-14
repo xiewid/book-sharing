@@ -1,4 +1,5 @@
-import { Injectable }      from "@angular/core";
+import { Injectable } from "@angular/core";
+import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { tokenNotExpired } from "angular2-jwt";
 
 // Avoid name not found warnings
@@ -18,6 +19,9 @@ export class AuthService {
   });
 
   userProfile: Object;
+  
+  // store the URL so we can redirect after logging in
+  //redirectUrl: string;
 
   constructor() {
     // Set userProfile attribute if already saved profile
@@ -49,9 +53,9 @@ export class AuthService {
 
   public logout() {
     // To log out, we just need to remove
-   // the user's profile and token
-   localStorage.removeItem('id_token');
-   localStorage.removeItem('profile');
-   this.userProfile = undefined;
+    // the user's profile and token
+    localStorage.removeItem('id_token');
+    localStorage.removeItem('profile');
+    this.userProfile = undefined;   
   };
 }

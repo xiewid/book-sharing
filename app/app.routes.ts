@@ -1,12 +1,18 @@
 import { provideRouter, RouterConfig } from "@angular/router";
+import { AuthGuard } from "./service/auth-guard.service";
+import { LoginComponent } from "./component/login.component";
+import { HomeComponent } from "./component/home.component";
+import { BookListComponent } from "./component/book-list.component";
+import { BookDetailComponent } from "./component/book-detail.component";
 
-import { BooksRoutes } from "./routes/books.routes";
-import { AppComponent } from "./app.component";
-
-export const routes = [
-  ...BooksRoutes
+export const routes: RouterConfig = [
+  { path: "login", component: LoginComponent },
+  { path: "home", component: HomeComponent },
+  { path: "books/:category_id", component: BookListComponent },
+  { path: "book/:id", component: BookDetailComponent },
+  { path: "", redirectTo: "/home", pathMatch: "full" }
 ];
 
-export const APP_ROUTER_PROVIDERS = [
+export const appRouterProviders = [
   provideRouter(routes)
 ];

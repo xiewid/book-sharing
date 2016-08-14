@@ -7,7 +7,8 @@ import { MockService } from "../service/mock.service";
 @Component({
   selector: "book-detail",
   templateUrl: "app/component/book-detail.html",
-  styleUrls: ["app/component/book-detail.css"]
+  styleUrls: ["app/component/book-detail.css"],
+  providers: [MockService]
 })
 
 export class BookDetailComponent implements OnInit, OnDestroy {

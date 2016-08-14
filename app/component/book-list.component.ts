@@ -12,7 +12,8 @@ import { IBook } from "../model/book";
         <span class="badge">{{book._id}}</span> {{book.title}}
       </li>
     </ul>
-  `
+  `,
+  providers: [MockService]
 })
 export class BookListComponent {
   books: IBook[];
